@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
 
-//Google Firebase Required
-apply plugin: 'com.google.gms.google-services'
+
 
 android {
     compileSdkVersion 25
@@ -28,23 +27,29 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-
+    //Android Design Libary
     compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:design:25.1.0'
 
+    //-----[Firebase Author]
+    compile 'com.google.firebase:firebase-auth:10.0.1'
+
+    //-----[Firebase UI Only]
     // FirebaseUI Database only
     compile 'com.firebaseui:firebase-ui-database:1.0.1'
-
     // FirebaseUI Auth only
     compile 'com.firebaseui:firebase-ui-auth:1.0.1'
-
     // FirebaseUI Storage only
     compile 'com.firebaseui:firebase-ui-storage:1.0.1'
-
     // Single target that includes all FirebaseUI libraries above
     compile 'com.firebaseui:firebase-ui:1.0.1'
-    
+
+    // ------[Firebase Message]
     compile 'com.google.firebase:firebase-messaging:10.0.1'
 
     compile 'com.google.firebase:firebase-core:10.0.1'
     testCompile 'junit:junit:4.12'
 }
+
+//Google Firebase Required
+apply plugin: 'com.google.gms.google-services'
