@@ -12,7 +12,26 @@
     tools:context="tech.getonpaper.victor.onpaper.MainActivity">
 
     <TextView
+        android:id="@+id/welcome"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:text="@string/welcome"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_13sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="@string/login_button"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="@color/colorHighlight"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@+id/welcome"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>
