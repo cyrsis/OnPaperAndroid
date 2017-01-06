@@ -31,6 +31,7 @@
         android:textSize="@dimen/_26sdp"
         android:textStyle="bold"
         android:textColor="@color/colorPrimaryDark"
+        
         android:layout_centerHorizontal="true"/>
     <LinearLayout
         android:id="@+id/button_wrapper"

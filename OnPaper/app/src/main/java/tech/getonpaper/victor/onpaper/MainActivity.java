@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
             if(resultCode == RESULT_OK){
                 loginUser();
             }
+
+
             if(resultCode == RESULT_CANCELED){
                 displayMessage(getString(R.string.signin_failed));
             }
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         Intent loginIntent = new Intent(MainActivity.this, SigninActivity.class);
         startActivity(loginIntent);
         finish();
+
     }
     private void displayMessage(String message){
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
