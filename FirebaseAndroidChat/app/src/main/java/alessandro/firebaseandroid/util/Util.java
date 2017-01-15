@@ -4,17 +4,12 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.widget.Toast;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-
 /**
  * Created by Alessandro Barreto on 23/06/2016.
  */
 public class Util {
 
-    public static final String URL_STORAGE_REFERENCE = "gs://alefirebase-b6a81.appspot.com";
+    public static final String URL_STORAGE_REFERENCE = "gs://onpaper-7caaa.appspot.com";
     public static final String FOLDER_STORAGE_IMG = "images";
 
     public static void initToast(Context c, String message){
