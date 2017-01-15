@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">OnPaper</string>
-    <string name="login_button">Login</string>
+    <string name="login_button">Google Sign in</string>
     <string name="welcome">Welcome to an inspirational community where you will experience everlasting upliftment</string>
     <string name="unknown_response">Known response</string>
     <string name="signin_failed">Failed signin</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#162327</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorWhite">#EDF6F5</color>
     <color name="colorHighlight">#82923A</color>
@@ -15,5 +15,8 @@
     <color name="secondary_text">#757575</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
+    <color name="buttonbg">#C6CFC0</color>
+    <color name="backgroundbg">#255254</color>
+
 
 </resources>
