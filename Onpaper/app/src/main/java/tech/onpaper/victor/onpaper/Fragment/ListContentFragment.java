@@ -1,4 +1,4 @@
-package tech.onpaper.victor.onpaper;
+package tech.onpaper.victor.onpaper.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import tech.onpaper.victor.onpaper.R;
 
 /**
  * Created by cyber on 2017-01-19.

@@ -1,4 +1,4 @@
-package tech.onpaper.victor.onpaper;
+package tech.onpaper.victor.onpaper.Activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -8,14 +8,24 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import java.util.ArrayList;
 import java.util.List;
+import tech.onpaper.victor.onpaper.Fragment.CardContentFragment;
+import tech.onpaper.victor.onpaper.Fragment.ListContentFragment;
+import tech.onpaper.victor.onpaper.R;
+import tech.onpaper.victor.onpaper.Fragment.TileContentFragment;
 
 public class MainActivity extends AppCompatActivity {
+
+  private FirebaseAnalytics mFirebaseAnalytics;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    // Obtain the FirebaseAnalytics instance.
+    mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
