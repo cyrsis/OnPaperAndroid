@@ -1,6 +1,8 @@
 package tech.onpaper.victor.onpaper.Activity;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,13 +10,14 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import java.util.ArrayList;
 import java.util.List;
 import tech.onpaper.victor.onpaper.Fragment.CardContentFragment;
 import tech.onpaper.victor.onpaper.Fragment.ListContentFragment;
-import tech.onpaper.victor.onpaper.R;
 import tech.onpaper.victor.onpaper.Fragment.TileContentFragment;
+import tech.onpaper.victor.onpaper.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
     tabs.addTab(tabs.newTab().setText("Out there"));
     tabs.addTab(tabs.newTab().setText("Your Salve"));
 
+    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+    fab.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Snackbar.make(v, "Hello Snackbar!",
+            Snackbar.LENGTH_LONG).show();
+      }
+    });
 
   }
 
