@@ -8,7 +8,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -19,7 +18,7 @@ import tech.onpaper.victor.onpaper.Fragment.ListContentFragment;
 import tech.onpaper.victor.onpaper.Fragment.TileContentFragment;
 import tech.onpaper.victor.onpaper.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
   private FirebaseAnalytics mFirebaseAnalytics;
 
@@ -39,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
     TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
 
-    tabs.addTab(tabs.newTab().setText("Right Now"));
-    tabs.addTab(tabs.newTab().setText("Out there"));
-    tabs.addTab(tabs.newTab().setText("Your Salve"));
+    tabs.setupWithViewPager(viewPager);
+    //tabs.addTab(tabs.newTab().setText("Right Now"));
+    //tabs.addTab(tabs.newTab().setText("Out there"));
+    //tabs.addTab(tabs.newTab().setText("Your Salve"));
 
     FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
     fab.setOnClickListener(new View.OnClickListener() {
