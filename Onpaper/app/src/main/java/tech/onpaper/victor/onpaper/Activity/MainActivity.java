@@ -1,20 +1,23 @@
 package tech.onpaper.victor.onpaper.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.auth.FirebaseAuth;
 import java.util.ArrayList;
 import java.util.List;
 import tech.onpaper.victor.onpaper.Fragment.CardContentFragment;
-import tech.onpaper.victor.onpaper.Fragment.ListContentFragment;
+import tech.onpaper.victor.onpaper.Fragment.MyPostsFragment;
 import tech.onpaper.victor.onpaper.Fragment.TileContentFragment;
 import tech.onpaper.victor.onpaper.R;
 
@@ -47,19 +50,39 @@ public class MainActivity extends BaseActivity {
     fab.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        Snackbar.make(v, "Hello Snackbar!",
-            Snackbar.LENGTH_LONG).show();
+         startActivity(new Intent(MainActivity.this,NewPostActivity.class));
+
+
       }
     });
 
   }
 
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.menu_main, menu);
+    return true;
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    int i = item.getItemId();
+    if (i == R.id.action_logout) {
+      FirebaseAuth.getInstance().signOut();
+      startActivity(new Intent(this, SignInActivity.class));
+      finish();
+      return true;
+    } else {
+      return super.onOptionsItemSelected(item);
+    }
+  }
+
   public void setUpViewPager(ViewPager viewPager) {
 
     CustomeAdapter adapter = new CustomeAdapter(getSupportFragmentManager());
-    adapter.addFragment(new ListContentFragment(), "List");
-    adapter.addFragment(new TileContentFragment(), "Tile");
-    adapter.addFragment(new CardContentFragment(), "Card");
+    adapter.addFragment(new MyPostsFragment(), "You");
+    adapter.addFragment(new TileContentFragment(), "OUT THERE");
+    adapter.addFragment(new CardContentFragment(), "SAlVE");
     viewPager.setAdapter(adapter);
   }
 
