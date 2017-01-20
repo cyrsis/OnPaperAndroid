@@ -13,4 +13,8 @@
         deserunt mollit anim id est laborum.
     </string>
   <string name="detail_location">"8 Rue Scribe, 75009 Paris, France"</string>
+  <string name="sign_in">Sign In</string>
+  <string name="sign_up">Sign Up</string>
+  <string name="hint_password">Password</string>
+  <string name="hint_email">E-mail</string>
 </resources>
