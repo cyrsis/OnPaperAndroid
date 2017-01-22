@@ -47,8 +47,12 @@ dependencies {
   compile 'com.jakewharton.rxbinding:rxbinding:1.0.0'
   compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
   compile 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
+  //CHAT UI
+  compile 'hani.momanii.supernova_emoji_library:supernova-emoji-library:0.0.2'
+  compile 'me.himanshusoni.chatmessageview:chat-message-view:1.0.3'
   testCompile 'junit:junit:4.12'
   annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+  compile 'com.github.bumptech.glide:glide:3.7.0'
 }
 
 
